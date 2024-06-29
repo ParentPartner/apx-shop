@@ -82,3 +82,14 @@ RegisterNetEvent('apx-shop:purchaseFailure')
 AddEventHandler('apx-shop:purchaseFailure', function(item)
     TriggerEvent('chat:addMessage', { args = { 'Shop', 'Failed to purchase ' .. item .. '. Not enough money.' } })
 end)
+
+RegisterNetEvent('apx-shop:receiveInventory')
+AddEventHandler('apx-shop:receiveInventory', function(inventory)
+    for _, item in ipairs(inventory) do
+        TriggerEvent('chat:addMessage', { args = { 'Inventory', item.name .. ' x' .. item.count } })
+    end
+end)
+
+RegisterCommand('inventory', function()
+    TriggerServerEvent('apx-shop:requestInventory')
+end, false)

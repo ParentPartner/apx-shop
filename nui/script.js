@@ -40,3 +40,14 @@ function purchaseItem(item, cost) {
         body: JSON.stringify({ item, cost })
     });
 }
+
+function updateInventory(inventory) {
+    const inventoryContainer = document.getElementById('inventory');
+    inventoryContainer.innerHTML = '';
+    inventory.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('inventory-item');
+        itemElement.innerHTML = `${item.name} x${item.count}`;
+        inventoryContainer.appendChild(itemElement);
+    });
+}

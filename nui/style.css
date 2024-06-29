@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background: transparent; /* Ensure background is transparent */
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,7 +11,7 @@ body {
 }
 
 #shop {
-    background: white;
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background for the shop */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
