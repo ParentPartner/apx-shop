@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Your Name'
-description 'Apex Shop'
+author 'Andromeda'
+description 'Apex Inventory'
 version '1.0.0'
 
 shared_script 'Config/config.lua'
@@ -23,4 +23,9 @@ files {
     'nui/index.html',
     'nui/style.css',
     'nui/script.js'
+}
+
+dependencies {
+    'Apex',
+    'oxmysql'
 }
